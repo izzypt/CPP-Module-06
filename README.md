@@ -50,6 +50,10 @@ static_cast is also (intentionally) less powerful than C-style casts, so you can
 
 ### 4. Dynamic Cast:
 
+Although dynamic casts have a few different capabilities, by far the most common use for dynamic casting is for converting base-class pointers into derived-class pointers. 
+
+This process is called downcasting
+
 ```cpp
 
 class Base {
