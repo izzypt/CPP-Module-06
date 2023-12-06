@@ -123,5 +123,3 @@ In summary, each type of cast serves a specific purpose:
  - Dynamic cast is used for safe downcasting in polymorphic class hierarchies, with runtime type checking.
  - Const cast is used to add or remove the const qualifier.
  - Reinterpret cast is a low-level cast that is less safe and should be used carefully.
-
-Choosing the right cast depends on the specific needs and constraints of the code, and it's important to use them judiciously to ensure correctness and maintainability.
