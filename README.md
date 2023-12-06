@@ -44,6 +44,8 @@ double doubleValue = 3.14;
 int intValue = static_cast<int>(doubleValue); // Static cast
 ```
 
+The main advantage of static_cast is that it provides compile-time type checking, making it harder to make an inadvertent error.
+
 ### 4. Dynamic Cast:
 
 ```cpp
