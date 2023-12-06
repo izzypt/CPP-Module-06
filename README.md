@@ -34,6 +34,9 @@ int intValue = int(doubleValue); // Functional casting
 ```
 
 ### 3. Static Cast:
+The static_cast operator takes an expression as input, and returns the evaluated value converted to the type specified inside the angled brackets. 
+
+static_cast is best used to convert one fundamental type into another.
 
 ```cpp
 
