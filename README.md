@@ -17,7 +17,7 @@ float floatValue = intValue; // Implicit conversion from int to float
 
 ### 2. Explicit Conversion (Type Casting):
 
-a. C-Style Casting:
+2.1 - C-Style Casting:
 
 ```cpp
 
@@ -25,7 +25,7 @@ double doubleValue = 3.14;
 int intValue = (int)doubleValue; // C-style casting
 ```
 
-b. Functional Casting:
+2.2 - Functional Casting:
 
 ```cpp
 
