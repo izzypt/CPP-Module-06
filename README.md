@@ -46,6 +46,8 @@ int intValue = static_cast<int>(doubleValue); // Static cast
 
 The main advantage of static_cast is that it provides compile-time type checking, making it harder to make an inadvertent error.
 
+static_cast is also (intentionally) less powerful than C-style casts, so you can’t inadvertently remove const or do other things you may not have intended to do.
+
 ### 4. Dynamic Cast:
 
 ```cpp
