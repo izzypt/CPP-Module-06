@@ -34,6 +34,9 @@ int intValue = int(doubleValue); // Functional casting
 ```
 
 ### 3. Static Cast:
+The static_cast operator takes an expression as input, and returns the evaluated value converted to the type specified inside the angled brackets. 
+
+static_cast is best used to convert one fundamental type into another.
 
 ```cpp
 
@@ -41,7 +44,15 @@ double doubleValue = 3.14;
 int intValue = static_cast<int>(doubleValue); // Static cast
 ```
 
+The main advantage of static_cast is that it provides compile-time type checking, making it harder to make an inadvertent error.
+
+static_cast is also (intentionally) less powerful than C-style casts, so you can’t inadvertently remove const or do other things you may not have intended to do.
+
 ### 4. Dynamic Cast:
+
+Although dynamic casts have a few different capabilities, by far the most common use for dynamic casting is for converting base-class pointers into derived-class pointers. 
+
+This process is called downcasting
 
 ```cpp
 
