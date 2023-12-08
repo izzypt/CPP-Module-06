@@ -6,12 +6,12 @@
 /*   By: smagalha <smagalha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 20:29:14 by smagalha          #+#    #+#             */
-/*   Updated: 2023/12/07 22:44:29 by smagalha         ###   ########.fr       */
+/*   Updated: 2023/12/08 17:59:59 by smagalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCALAR_HPP
-#define SCALAR_HPP
+#ifndef SCALAR_CONVERTER_HPP
+#define SCALAR_CONVERTER_HPP
 
 #include <iostream> // to use cout
 #include <string> // to use string
@@ -26,11 +26,14 @@ class ScalarConverter
 {
     public:
         ScalarConverter();
+        ~ScalarConverter();
         static void convert(std::string literal);
-        static char convert();
-        static int convert();
-        static float convert();
-        static double convert();
+        static void detectType(std::string literal);
 };
+
+bool is_char(std::string literal);
+bool is_float(std::string literal);
+bool is_double();
+bool is_int();
 
 #endif
