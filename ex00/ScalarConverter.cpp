@@ -6,7 +6,7 @@
 /*   By: smagalha <smagalha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 22:39:05 by smagalha          #+#    #+#             */
-/*   Updated: 2023/12/08 22:34:38 by smagalha         ###   ########.fr       */
+/*   Updated: 2023/12/08 22:40:57 by smagalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,6 +139,6 @@ void    ScalarConverter::detectType(std::string literal)
         std::cout << "It must be a float" << std::endl;
     if (is_int(literal))
         std::cout << "It must be a int" << std::endl;
-    if (is_int(literal))
+    if (is_double(literal))
         std::cout << "It must be a int" << std::endl;
 }

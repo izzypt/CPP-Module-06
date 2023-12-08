@@ -6,7 +6,7 @@
 /*   By: smagalha <smagalha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 20:29:14 by smagalha          #+#    #+#             */
-/*   Updated: 2023/12/08 22:31:53 by smagalha         ###   ########.fr       */
+/*   Updated: 2023/12/08 22:39:03 by smagalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ class ScalarConverter
 {
     public:
         ScalarConverter();
+        ScalarConverter(ScalarConverter const &src);
+        ScalarConverter& operator=(ScalarConverter const &src);
         ~ScalarConverter();
         static void convert(std::string literal);
         static void detectType(std::string literal);
