@@ -6,7 +6,7 @@
 /*   By: smagalha <smagalha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 22:39:05 by smagalha          #+#    #+#             */
-/*   Updated: 2023/12/08 22:40:57 by smagalha         ###   ########.fr       */
+/*   Updated: 2023/12/08 22:48:50 by smagalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,18 +113,12 @@ bool ScalarConverter::is_double(std::string literal)
             {
                 dot_count++;
                 if (dot_count > 1 || std::isdigit(literal[i + 1]) == 0 || literal[i + 1] == '\0')
-                {
                     return (false);
-                }
             }
             else if ((literal[i] == 'D' || literal[i] == 'd') && dot_count == 1 && literal[i + 1] == '\0')
-            {
                 return (true);
-            }
             else
-            {
                 return (false);
-            }
         }
         i++;
     }
