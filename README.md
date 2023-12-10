@@ -8,6 +8,7 @@
  - [Differences and profile of each Cast](#differences)
  - [std::numeric_limits](#limits)
  - [Static member functions and variables](#static)
+ - [What is Serialization and DeSerialization](#serialization)
 
 <a id="conversion"></a>
 # Type Conversion
@@ -286,3 +287,12 @@ This program produces the following output:
 Because s_value is a static member variable, s_value is shared between all objects of the class. 
 
 Consequently, first.s_value is the same variable as second.s_value. The above program shows that the value we set using first can be accessed using second!
+
+<a id="serialization"></a>
+# What is serialization and deserialization
+
+Serialization is a technique for converting an item into a byte sequence that may be kept in memory. Once produced, the byte stream can be streamed to a remote receiving end through a communication channel. Deserialization is the inverse of serialization.
+
+Once produced, the deserliazation process byte stream converts into the original object definition. The C++ runtimes used this method to transfer compiled memory structures through the different components of application dynamic runtimes.
+
+###
