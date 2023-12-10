@@ -6,7 +6,7 @@
 /*   By: smagalha <smagalha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 22:39:05 by smagalha          #+#    #+#             */
-/*   Updated: 2023/12/10 16:38:21 by smagalha         ###   ########.fr       */
+/*   Updated: 2023/12/10 21:30:29 by smagalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,7 @@ ScalarConverter &ScalarConverter::operator=(ScalarConverter const &src)
 {
     std::cout << "Assignment operator called" << std::endl;
     if (this != &src)
-    {
         (void)src;
-    }
     return (*this);
 }
 
@@ -40,7 +38,7 @@ ScalarConverter::~ScalarConverter()
 
 bool ScalarConverter::is_char(std::string literal)
 {
-    if (isalpha(literal[0])  && literal.length() == 1)
+    if (isalpha(literal[0]) && literal.length() == 1)
         return true;
     return false;
 }
