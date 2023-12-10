@@ -213,7 +213,6 @@ The syntax for defining a static member function in C++ is as follows:
     };
 ```
 
-<a id="static_members"></a>
 # Static member variables
 
 ![image](https://github.com/izzypt/CPP-Module-06/assets/73948790/a45fa92f-c0b3-4874-8d9b-87d6ed2d2530)
