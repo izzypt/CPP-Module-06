@@ -81,7 +81,9 @@ Derived* derivedPtr = dynamic_cast<Derived*>(basePtr); // Dynamic cast
 ### 5. Reinterpret Cast:
 
   Converts a pointer type to another pointer type, even if they are not related.
+  
   Often used for low-level casting, such as casting between pointers and integers.
+  
   Considered unsafe and should be used with caution.
 
 ```cpp
