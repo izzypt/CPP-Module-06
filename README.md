@@ -6,7 +6,7 @@
 
  - [Type Conversion](#conversion)
  - [Differences and profile of each Cast](#differences)
- - [std::numeric_imits](#limits)
+ - [std::numeric_limits](#limits)
  - [Static member functions and variables](#static)
 
 <a id="conversion"></a>
@@ -197,7 +197,21 @@ Static member functions in C++ are class-level functions that are associated wit
 
 They are declared using the static keyword, and we can call such a function with a class name without the need to create an object.
 
+Static member functions are commonly used for operations that are related to the class as a whole rather than to specific instances.
 
+Syntax: 
+
+The syntax for defining a static member function in C++ is as follows:
+```cpp
+    class ClassName
+    {
+        public:
+            static returnType functionName(parameters)
+            {
+                 // Function body implementation
+            }
+    };
+```
 
 <a id="static_members"></a>
 # Static member variables
