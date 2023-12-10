@@ -6,7 +6,9 @@
 
  - [Type Conversion](#conversion)
  - [Differences and profile of each Cast](#differences)
- - [std::numeric_imits](#limits)
+ - [std::numeric_limits](#limits)
+ - [Static member functions and variables](#static)
+ - [What is Serialization and DeSerialization](#serialization)
 
 <a id="conversion"></a>
 # Type Conversion
@@ -188,3 +190,109 @@ int main() {
 ```
 
 This program prints information about the minimum and maximum values and signedness of `int` and `float` types using `std::numeric_limits`.
+
+<a id="static"></a>
+# Static member functions
+
+Static member functions in C++ are class-level functions that are associated with the class itself rather than with individual instances (objects) of the class. 
+
+They are declared using the static keyword, and we can call such a function with a class name without the need to create an object.
+
+Static member functions are commonly used for operations that are related to the class as a whole rather than to specific instances.
+
+Syntax: 
+
+The syntax for defining a static member function in C++ is as follows:
+```cpp
+    class ClassName
+    {
+        public:
+            static returnType functionName(parameters)
+            {
+                 // Function body implementation
+            }
+    };
+```
+
+# Static member variables
+
+![image](https://github.com/izzypt/CPP-Module-06/assets/73948790/a45fa92f-c0b3-4874-8d9b-87d6ed2d2530)
+
+
+Before we go into the static keyword as applied to member variables, first consider the following class:
+
+```cpp
+
+#include <iostream>
+
+struct Something
+{
+    int value{ 1 };
+};
+
+int main()
+{
+    Something first{};
+    Something second{};
+
+    first.value = 2;
+
+    std::cout << first.value << '\n';
+    std::cout << second.value << '\n';
+
+    return 0;
+}
+```
+
+- When we instantiate a class object, each object gets its own copy of all normal member variables. 
+
+- In this case, because we have declared two Something class objects, we end up with two copies of value: first.value, and second.value. first.value is distinct from second.value. Consequently, the program above prints:
+
+```
+2
+1
+```
+
+Member variables of a class can be made static by using the static keyword. 
+
+Unlike normal member variables, static member variables are shared by all objects of the class. Consider the following program, similar to the above:
+
+```cpp
+#include <iostream>
+
+struct Something
+{
+    static int s_value; // now static
+};
+
+int Something::s_value{ 1 }; // initialize s_value to 1
+
+int main()
+{
+    Something first{};
+    Something second{};
+
+    first.s_value = 2;
+
+    std::cout << first.s_value << '\n';
+    std::cout << second.s_value << '\n';
+    return 0;
+}
+```
+This program produces the following output:
+```cpp
+2
+2
+```
+Because s_value is a static member variable, s_value is shared between all objects of the class. 
+
+Consequently, first.s_value is the same variable as second.s_value. The above program shows that the value we set using first can be accessed using second!
+
+<a id="serialization"></a>
+# What is serialization and deserialization
+
+Serialization is a technique for converting an item into a byte sequence that may be kept in memory. Once produced, the byte stream can be streamed to a remote receiving end through a communication channel. Deserialization is the inverse of serialization.
+
+Once produced, the deserliazation process byte stream converts into the original object definition. The C++ runtimes used this method to transfer compiled memory structures through the different components of application dynamic runtimes.
+
+###
