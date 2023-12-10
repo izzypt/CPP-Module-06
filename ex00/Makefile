@@ -14,7 +14,7 @@ GREEN=\033[1;32m
 YELLOW=\033[1;33m
 NC=\033[0m #color reset value (No color)
 
-$(NAME):
+$(NAME): $(SRCS)
 		@echo "$(GREEN)Compiling ex00 with MakeFile...$(NC)"
 		$(CC) $(SRCS) -o $(NAME)
 
@@ -26,6 +26,5 @@ clean:
 	rm -f $(NAME)
 
 re: clean all
-
 
 .PHONY: all clean re
